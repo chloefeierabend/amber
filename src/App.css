@@ -4,39 +4,224 @@
   padding: 2rem;
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+* {
+  box-sizing: border-box;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  margin: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
+  background: #faf9f7;
+  color: #1a1a1a;
+  min-height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.card {
-  padding: 2em;
+/* Header */
+.header {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 100%);
+  color: white;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
 }
 
-.read-the-docs {
+.header__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+  letter-spacing: -0.02em;
+}
+
+.header__subtitle {
+  font-size: 1.1rem;
+  margin: 0;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+/* Main content */
+.main {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Search Section */
+.search-section {
+  margin-bottom: 2rem;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.search-form__row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.search-form__row--filters {
+  justify-content: space-between;
+}
+
+.search-form__input-group {
+  display: flex;
+  flex: 1;
+  gap: 0.5rem;
+}
+
+.search-form__input {
+  flex: 1;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #e5e5e5;
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+}
+
+.search-form__input:focus {
+  outline: none;
+  border-color: #d97706;
+}
+
+.search-form__select {
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #e5e5e5;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.search-form__select:focus {
+  outline: none;
+  border-color: #d97706;
+}
+
+.search-form__select--type {
+  min-width: 140px;
+}
+
+.search-form__button {
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: #b45309;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.search-form__button:hover {
+  background: #92400e;
+}
+
+.search-form__button--secondary {
+  background: white;
+  color: #b45309;
+  border: 2px solid #b45309;
+}
+
+.search-form__button--secondary:hover {
+  background: #fef3c7;
+}
+
+/* Results Section */
+.results-section {
+  margin-top: 1rem;
+}
+
+.results__status {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #666;
+}
+
+.results__status--error {
+  color: #dc2626;
+}
+
+.results__count {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0 0 1.25rem 0;
+}
+
+.results__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
   color: #888;
+  font-size: 0.875rem;
+  border-top: 1px solid #e5e5e5;
+  margin-top: auto;
+}
+
+.footer a {
+  color: #b45309;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .header {
+    padding: 2rem 1rem;
+  }
+
+  .header__title {
+    font-size: 2rem;
+  }
+
+  .main {
+    padding: 1.5rem 1rem;
+  }
+
+  .search-form__row {
+    flex-direction: column;
+  }
+
+  .search-form__row--filters {
+    flex-direction: row;
+  }
+
+  .search-form__input-group {
+    flex-direction: column;
+  }
+
+  .search-form__button {
+    width: 100%;
+  }
+
+  .search-form__button--secondary {
+    width: auto;
+  }
+
+  .results__grid {
+    grid-template-columns: 1fr;
+  }
 }

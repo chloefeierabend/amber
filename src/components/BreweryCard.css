@@ -1,0 +1,121 @@
+.brewery-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.brewery-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.brewery-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.brewery-card__name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.brewery-card__type {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.625rem;
+  border-radius: 100px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  background: #f0f0f0;
+  color: #666;
+}
+
+/* Type-specific colors */
+.brewery-card__type--micro {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.brewery-card__type--nano {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.brewery-card__type--brewpub {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.brewery-card__type--regional {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+.brewery-card__type--large {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.brewery-card__type--bar {
+  background: #ffedd5;
+  color: #9a3412;
+}
+
+.brewery-card__type--contract {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.brewery-card__type--planning {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.brewery-card__type--proprietor {
+  background: #fce7f3;
+  color: #9d174d;
+}
+
+.brewery-card__address {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.4;
+}
+
+.brewery-card__country {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+}
+
+.brewery-card__footer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #eee;
+}
+
+.brewery-card__link {
+  font-size: 0.875rem;
+  color: #b45309;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.brewery-card__link:hover {
+  color: #92400e;
+  text-decoration: underline;
+}
